@@ -1,13 +1,27 @@
+'use client';
+
 import { WorkExperienceItem } from '@/components/work-experience-item';
 import { HackathonItem } from '@/components/hackathon-item';
 import { workExperiences, hackathonAwards } from '@/data/resume';
 import { SkillsCanvas } from '@/components/skills-canvas';
 import { Navbar } from '@/components/nav-bar';
 import { ProductRecordings } from '@/components/portfolio';
+import dynamic from 'next/dynamic';
+import { ResponsiveMouseTrail } from '@/components/responsive-mouse-trail';
+
+// Dynamically import the MouseTrail component with SSR disabled
+// since it relies on browser APIs
+const MouseTrail = dynamic(() => import('@/components/mouse-trail'), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row p-6 md:py-[200px] md:px-12 mx-auto md:justify-center">
+      {/* Replace the direct MouseTrail with the responsive wrapper */}
+      <ResponsiveMouseTrail />
+
       <div className="w-full md:w-64 md:h-screen mb-8 md:mb-0">
         <Navbar />
       </div>

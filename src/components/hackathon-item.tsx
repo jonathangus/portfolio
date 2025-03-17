@@ -22,7 +22,7 @@ export function HackathonItem({ award }: HackathonItemProps) {
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gray-100 hover:bg-gray-200 text-xs font-mono uppercase tracking-wider py-1 px-3 mr-2 rounded-sm"
+              className="click-action inline-block bg-gray-100 hover:bg-gray-200 text-xs font-mono uppercase tracking-wider py-1 px-3 mr-2 rounded-sm"
             >
               GITHUB
             </Link>
@@ -33,7 +33,7 @@ export function HackathonItem({ award }: HackathonItemProps) {
               href={submissionLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gray-100 hover:bg-gray-200 text-xs font-mono uppercase tracking-wider py-1 px-3 rounded-sm"
+              className="click-action inline-block bg-gray-100 hover:bg-gray-200 text-xs font-mono uppercase tracking-wider py-1 px-3 rounded-sm"
             >
               SUBMISSION
             </Link>

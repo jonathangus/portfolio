@@ -33,23 +33,37 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
   .font-mono {
-    font-family: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: var(--font-departure-mono), ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
-  
+
   /* Remove focus outlines */
-  video:focus, 
-  [role="dialog"]:focus,
+  video:focus,
+  [role='dialog']:focus,
   [data-state]:focus,
   [data-state] *:focus {
     outline: none !important;
     box-shadow: none !important;
   }
+}
+
+.click-action {
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
 }
 
 .long-dash {
