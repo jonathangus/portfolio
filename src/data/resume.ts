@@ -8,7 +8,7 @@ export interface WorkExperience {
 
 export interface HackathonAward {
   event: string;
-  achievement: string;
+  achievement?: string;
   githubLink?: string;
   submissionLink?: string;
 }
@@ -29,7 +29,7 @@ export const workExperiences: WorkExperience[] = [
       'Part of the founding team enabling individuals to invest in music rights from artists like Rihanna and Justin Bieber, onchain. Helped raise €7.3M and innovated on utilizing web3 for decentralization, transparency, and financial benefits for music royalties.',
   },
   {
-    title: 'Freelancer',
+    title: 'Freelance',
     company: 'Virtune',
     period: 'Dec 2021',
     description:
@@ -47,7 +47,7 @@ export const workExperiences: WorkExperience[] = [
     company: '3',
     period: 'October 2019 - March 2021',
     description:
-      'Launched tre.se and its new webshop while working on the architecture and foundation to improve the experience for developers, editors, and end-users.',
+      'Launched tre.se and its new webshop while working on the architecture and foundation to improve the experience for developers, editors, and end-users. Shipped solutions to handle 100x increase in traffic during specific iPhone launches.',
   },
   {
     title: 'Senior Frontend Developer',
@@ -82,26 +82,53 @@ export const workExperiences: WorkExperience[] = [
 
 export const hackathonAwards: HackathonAward[] = [
   {
+    event: 'Agentic Ethereum - 2025',
+    achievement: 'Solo hacking on Eliza and AA',
+    githubLink: 'https://github.com/jonathangus/based-helper',
+    submissionLink: 'https://ethglobal.com/showcase/based-helper-4tev7',
+  },
+  {
+    event: 'ETHGlobal Paris - 2023',
+    achievement: 'Onboarding creators to Lens with erc-6651',
+    githubLink: 'https://github.com/jonathangus/headstart',
+    submissionLink: 'https://ethglobal.com/showcase/headstart-7ty8p',
+  },
+  {
     event: 'ETH Istanbul - 2023',
     achievement: '1st price from Aave and Unlimit',
-    // githubLink: 'https://github.com/jonathangus/eth-global-istanbul',
-    // submissionLink: 'https://ethglobal.com/showcase/aatomato-mf0sy',
+    githubLink: 'https://github.com/jonathangus/eth-global-istanbul',
+    submissionLink: 'https://ethglobal.com/showcase/aatomato-mf0sy',
+  },
+  {
+    event: 'ETH Istanbul - 2023',
+    achievement: '1st price from Aave and Unlimit',
+    githubLink: 'https://github.com/jonathangus/eth-global-istanbul',
+    submissionLink: 'https://ethglobal.com/showcase/aatomato-mf0sy',
+  },
+  {
+    event: 'ETH Lisbon - 2023',
+    githubLink: 'https://github.com/jonathangus/eth-lisbon-2023',
+    submissionLink: 'https://ethglobal.com/showcase/tba-lens-m8ki4',
+    achievement: 'Wins from Lens',
   },
   {
     event: 'Arbitrum Hackathon Bogota - 2022',
     achievement: '1st prize from Livepeer and Chainlink',
-    // githubLink: 'https://github.com/jontis/arbitrum-bogota-2022',
+    githubLink: 'https://github.com/jonathangus/arbigates',
+    submissionLink: 'https://devpost.com/software/lazy-mint',
   },
+
   {
     event: 'ETH Bogota - 2022',
     achievement: 'Wins from 9 sponsors',
-    // submissionLink: 'https://devfolio.co/projects/eth-bogota-2022',
+    githubLink: 'https://github.com/jonathangus/gates',
+    submissionLink: 'https://ethglobal.com/showcase/gates-wtf-qy8w8',
   },
   {
     event: 'ETH New York - 2022',
     achievement: 'Winner, Open Track and 1st prize from UMA',
-    // githubLink: 'https://github.com/jontis/eth-newyork-2022',
-    // submissionLink: 'https://devfolio.co/projects/eth-newyork-2022',
+    githubLink: 'https://ethglobal.com/showcase/nft-safe-launch-nckve',
+    submissionLink: 'https://github.com/jonathangus/ethglobal-NYC-hackathon',
   },
   {
     event: 'ETH Lisbon - 2021',
