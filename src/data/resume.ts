@@ -67,6 +67,7 @@ export const workExperiences: WorkExperience[] = [
     title: 'Fullstack Developer',
     company: 'Digitalist',
     period: 'Jul 2014 - Nov 2016',
+    // description: 'Agency working with clients like Saint-Gobain',
   },
   {
     title: 'Web Developer',
