@@ -39,7 +39,7 @@ export function ResponsiveMouseTrail() {
 
   // Only render MouseTrail if screen is large enough
   return isLargeScreen ? (
-    <div className="fixed inset-0 pointer-events-none z-10">
+    <div className="fixed inset-0 pointer-events-none">
       <MouseTrail />
     </div>
   ) : null;

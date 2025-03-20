@@ -6,15 +6,7 @@ import { workExperiences, hackathonAwards } from '@/data/resume';
 import { SkillsCanvas } from '@/components/skills-canvas';
 import { Navbar } from '@/components/nav-bar';
 import { ProductRecordings } from '@/components/portfolio';
-import dynamic from 'next/dynamic';
 import { ResponsiveMouseTrail } from '@/components/responsive-mouse-trail';
-
-// Dynamically import the MouseTrail component with SSR disabled
-// since it relies on browser APIs
-const MouseTrail = dynamic(() => import('@/components/mouse-trail'), {
-  ssr: false,
-  loading: () => null,
-});
 
 export default function Home() {
   return (
@@ -25,7 +17,7 @@ export default function Home() {
       <div className="w-full  md:mr-[60px]  h-[100px] md:w-[150px] mb-8 md:mb-0 z-10 md:sticky md:top-0">
         <Navbar />
       </div>
-      <main className="w-full max-w-4xl">
+      <main className="w-full max-w-4xl relative z-10">
         <div className="mx-0 md:mx-auto">
           <section className="mb-24">
             <h1 className="mb-6  text-4xl md:text-5xl font-semibold leading-tight font-mono">
