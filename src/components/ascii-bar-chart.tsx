@@ -1,7 +1,6 @@
 interface Package {
   name: string;
   downloads: number;
-  color: string;
 }
 
 interface AsciiBarChartProps {

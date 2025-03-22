@@ -10,7 +10,6 @@ const processedPackageData = Object.entries(metrics.packages)
   .map(([name, count]) => ({
     name,
     downloads: count,
-    color: 'text-muted-foreground',
   }))
   .sort((a, b) => b.downloads - a.downloads);
 
@@ -119,7 +118,7 @@ export function NpmMetricsVisualizer() {
                     animate={{ opacity: bootProgress > 30 ? 1 : 0 }}
                     className="text-muted-foreground"
                   >
-                    found {metrics.count} package.json in this system
+                    found "{metrics.count} package.json in this system"
                   </motion.span>
                 </div>
               </div>
@@ -150,21 +149,6 @@ Most Used: ${processedPackageData[0].name} (${
       </AnimatePresence>
 
       <style jsx global>{`
-        @keyframes typing {
-          from {
-            width: 0;
-          }
-          to {
-            width: 100%;
-          }
-        }
-
-        .typing-animation {
-          overflow: hidden;
-          white-space: nowrap;
-          animation: typing 3s steps(40, end);
-        }
-
         .custom-scrollbar::-webkit-scrollbar {
           width: 8px;
         }
