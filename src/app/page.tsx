@@ -16,6 +16,17 @@ const PixelationEffect = dynamic(
   }
 );
 
+const NpmMetricsVisualizer = dynamic(
+  () =>
+    import('@/components/metrics/npm-metrics-visualizer').then(
+      (mod) => mod.NpmMetricsVisualizer
+    ),
+  {
+    ssr: false,
+    loading: () => <div className="w-full min-h-[80vh]" />,
+  }
+);
+
 export default function Home() {
   return (
     <main>
@@ -95,6 +106,21 @@ export default function Home() {
                 <h2 className="mb-8 text-2xl font-medium">Skills</h2>
                 <div className="w-full">
                   <SkillsCanvas />
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-24 relative md:pl-0">
+              <div className="font-medium text-3xl text-muted-foreground font-mono md:absolute md:-left-20 mb-4 md:mb-0 text-left">
+                05
+              </div>
+              <div className="text-left">
+                <h2 className="text-2xl font-medium">NPM Package Usage</h2>
+                <p className="text-muted-foreground mb-8">
+                  Based on the project.json files found on my computer
+                </p>
+                <div className="w-full">
+                  <NpmMetricsVisualizer />
                 </div>
               </div>
             </section>

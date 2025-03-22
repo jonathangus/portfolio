@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 export function SkillsCanvas() {
   const skills = [
     'TypeScript',
-    'Python',
     'JavaScript',
     'viem',
     'wagmi',
@@ -36,6 +35,7 @@ export function SkillsCanvas() {
     'Serverless',
     'SEO',
     'PWA',
+    'Python',
     'Eliza',
     'Drizzle',
     'AI',
@@ -69,23 +69,14 @@ export function SkillsCanvas() {
 
   return (
     <div className="w-full lowercase overflow-y-auto rounded-lg">
-      <motion.ul
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {skills.map((skill, index) => (
-          <motion.li
-            key={index}
-            className="flex items-center"
-            variants={itemVariants}
-          >
+          <li key={index} className="flex items-center">
             <span className="h-2 w-2 bg-black rounded-full mr-2"></span>
             <span className="text-black font-medium">{skill}</span>
-          </motion.li>
+          </li>
         ))}
-      </motion.ul>
+      </ul>
     </div>
   );
 }

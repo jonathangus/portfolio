@@ -26,6 +26,24 @@ export const metadata: Metadata = {
     'DeFi',
   ],
   authors: [{ name: 'Jonathan Gustafsson' }],
+  openGraph: {
+    title: 'Jonathan Gustafsson',
+    description: '11+ year experienced CTO and full stack software engineer',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Jonathan Gustafsson - CTO and Full Stack Engineer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jonathan Gustafsson',
+    description: '11+ year experienced CTO and full stack software engineer',
+    images: ['/og.png'],
+  },
   icons: {
     icon: [
       { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
