@@ -17,8 +17,7 @@ const CONFIG = {
   transitionDuration: 800, // Duration of transition in milliseconds
 
   // Image settings
-  imageUrl:
-    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Removal-272-fzCMMVNDs3z675UBEa8XqHEc5vY0zE.png',
+  imageUrl: '/face.png',
 };
 
 export default function PixelationEffect() {

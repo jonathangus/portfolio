@@ -9,7 +9,7 @@ import { ProductRecordings } from '@/components/portfolio';
 import { ResponsiveMouseTrail } from '@/components/responsive-mouse-trail';
 import dynamic from 'next/dynamic';
 
-export const PixelationEffect = dynamic(
+const PixelationEffect = dynamic(
   () => import('../components/pixelation-effect'),
   {
     ssr: false,
