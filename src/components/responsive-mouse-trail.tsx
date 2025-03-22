@@ -36,7 +36,7 @@ export function ResponsiveMouseTrail() {
 
   // Don't render anything during SSR or before hydration
   if (!isMounted) return null;
-
+  return null;
   // Only render MouseTrail if screen is large enough
   return isLargeScreen ? (
     <div className="fixed inset-0 pointer-events-none">

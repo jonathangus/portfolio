@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { WorkExperience } from '@/data/resume';
 import {
   Dialog,
@@ -8,13 +9,29 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { GitHubContributionsGrid } from '@/components/github-contributions-grid';
+import { getContributionsForPeriod, parsePeriodString } from '@/utils/github';
 
 interface WorkExperienceItemProps {
   experience: WorkExperience;
 }
 
 export function WorkExperienceItem({ experience }: WorkExperienceItemProps) {
-  const { title, company, period, description, videoUrl } = experience;
+  const { title, company, period, description, videoUrl, showGithub } =
+    experience;
+
+  // Memoize the contributions data to prevent unnecessary recalculations
+  const { contributions, totalCount } = useMemo(() => {
+    // Only calculate contributions if showGithub is true
+    if (!showGithub) {
+      return { contributions: [], totalCount: 0 };
+    }
+    const { startDate, endDate } = parsePeriodString(period);
+    return getContributionsForPeriod(startDate, endDate);
+  }, [period, showGithub]);
+
+  // Only render if there are contributions and showGithub is true
+  const hasContributions = showGithub && totalCount > 0;
 
   return (
     <div className="mb-16">
@@ -32,6 +49,17 @@ export function WorkExperienceItem({ experience }: WorkExperienceItemProps) {
         &gt; {company}
       </div>
       {description && <p className="text-muted-foreground">{description}</p>}
+
+      {/* GitHub Contributions */}
+      {hasContributions && (
+        <div className="mt-4">
+          <GitHubContributionsGrid
+            contributions={contributions}
+            totalCount={totalCount}
+            className="text-muted-foreground"
+          />
+        </div>
+      )}
 
       {videoUrl && (
         <div className="mt-4">

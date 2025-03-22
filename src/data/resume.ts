@@ -4,6 +4,7 @@ export interface WorkExperience {
   period: string;
   description?: string;
   videoUrl?: string;
+  showGithub?: boolean;
 }
 
 export interface HackathonAward {
@@ -24,14 +25,15 @@ export const workExperiences: WorkExperience[] = [
   {
     title: 'Chief Technical Officer',
     company: 'anotherblock',
-    period: 'Jan 2022 - present',
+    period: 'Feb 2022 - present',
+    showGithub: true,
     description:
       'Part of the founding team enabling individuals to invest in music rights from artists like Rihanna and Justin Bieber, onchain. Helped raise €7.3M and innovated on utilizing web3 for decentralization, transparency, and financial benefits for music royalties.',
   },
   {
     title: 'Freelance',
     company: 'Virtune',
-    period: 'Dec 2021',
+    period: 'Jan 2022',
     description:
       'Conducted a case study on enabling traditional investors to invest in crypto in Sweden, resulting in Virtune.com that lets users buy cryptocurrencies like staked ETH on Avanza.',
   },
@@ -46,6 +48,8 @@ export const workExperiences: WorkExperience[] = [
     title: 'Senior Frontend Developer',
     company: '3',
     period: 'October 2019 - March 2021',
+    showGithub: true,
+
     description:
       'Launched tre.se and its new webshop while working on the architecture and foundation to improve the experience for developers, editors, and end-users. Shipped solutions to handle 100x increase in traffic during specific iPhone launches.',
   },
@@ -53,6 +57,8 @@ export const workExperiences: WorkExperience[] = [
     title: 'Senior Frontend Developer',
     company: 'Cabonline',
     period: 'February 2018 - October 2019',
+    showGithub: true,
+
     description:
       "Sweden's largest cab company, where I built consumer apps, internal apps, and public websites.",
   },
@@ -67,6 +73,8 @@ export const workExperiences: WorkExperience[] = [
     title: 'Fullstack Developer',
     company: 'Digitalist',
     period: 'Jul 2014 - Nov 2016',
+    showGithub: true,
+
     // description: 'Agency working with clients like Saint-Gobain',
   },
   {
