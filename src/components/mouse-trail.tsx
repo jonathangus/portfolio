@@ -157,23 +157,6 @@ function Scene() {
         // Inside canvas - use precise UV calculation
         const { x, y } = calculatePreciseUV(event.clientX, event.clientY, rect);
 
-        // Debug logging
-        console.log('Mouse Event Debug:', {
-          clientX: event.clientX,
-          clientY: event.clientY,
-          rect: {
-            left: rect.left,
-            top: rect.top,
-            width: rect.width,
-            height: rect.height,
-          },
-          calculatedUV: { x, y },
-          relativeToCenter: {
-            x: (event.clientX - (rect.left + rect.width / 2)) / rect.width,
-            y: (event.clientY - (rect.top + rect.height / 2)) / rect.height,
-          },
-        });
-
         onMove({
           uv: { x, y },
           distance: 0,

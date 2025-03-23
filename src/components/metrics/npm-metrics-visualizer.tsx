@@ -18,6 +18,8 @@ export function NpmMetricsVisualizer() {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [bootProgress, setBootProgress] = useState(0);
+  const isMobile =
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,12 +52,12 @@ export function NpmMetricsVisualizer() {
           setTimeout(() => setBootSequence(false), 500);
           return 100;
         }
-        return prev + 2;
+        return prev + (isMobile ? 4 : 2);
       });
     }, 50);
 
     return () => clearInterval(interval);
-  }, [isVisible]);
+  }, [isVisible, isMobile]);
 
   if (!isVisible) {
     return (
@@ -81,8 +83,9 @@ export function NpmMetricsVisualizer() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <pre className="text-center text-[8px] xs:text-xs sm:text-sm md:text-base overflow-x-auto">
-                {`
+              <div className="hidden md:block">
+                <pre className="text-center text-xs sm:text-sm md:text-base overflow-x-auto">
+                  {`
 ███╗   ██╗██████╗ ███╗   ███╗    ███╗   ███╗███████╗████████╗██████╗ ██╗ ██████╗███████╗
 ████╗  ██║██╔══██╗████╗ ████║    ████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██║██╔════╝██╔════╝
 ██╔██╗ ██║██████╔╝██╔████╔██║    ██╔████╔██║█████╗     ██║   ██████╔╝██║██║     ███████╗
@@ -91,15 +94,19 @@ export function NpmMetricsVisualizer() {
 ╚═╝  ╚═══╝╚═╝     ╚═╝     ╚═╝    ╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝
                                                                                           
 `}
-              </pre>
+                </pre>
+              </div>
+              <div className="block md:hidden"></div>
               <div className="mt-4 flex flex-col items-center space-y-2">
                 <div className="flex items-center">
-                  <span className="text-muted-foreground mr-2">$</span>
+                  <span className="text-muted-foreground mr-2 text-xs md:text-base">
+                    $
+                  </span>
                   <motion.span
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
-                    transition={{ duration: 2 }}
-                    className="overflow-hidden whitespace-nowrap"
+                    transition={{ duration: isMobile ? 1 : 1.6 }}
+                    className="overflow-hidden whitespace-nowrap text-xs md:text-base"
                   >
                     initializing system... [{bootProgress}%]
                   </motion.span>
@@ -112,11 +119,13 @@ export function NpmMetricsVisualizer() {
                   />
                 </div>
                 <div className="flex items-center">
-                  <span className="text-muted-foreground mr-2">$</span>
+                  <span className="text-muted-foreground mr-2 text-xs md:text-base">
+                    $
+                  </span>
                   <motion.span
                     initial={{ opacity: 0 }}
                     animate={{ opacity: bootProgress > 30 ? 1 : 0 }}
-                    className="text-muted-foreground"
+                    className="text-muted-foreground text-xs md:text-base"
                   >
                     found "{metrics.count} package.json in this system"
                   </motion.span>
