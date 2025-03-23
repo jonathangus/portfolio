@@ -104,13 +104,7 @@ export const hackathonAwards: HackathonAward[] = [
   },
   {
     event: 'ETH Istanbul - 2023',
-    achievement: '1st price from Aave and Unlimit',
-    githubLink: 'https://github.com/jonathangus/eth-global-istanbul',
-    submissionLink: 'https://ethglobal.com/showcase/aatomato-mf0sy',
-  },
-  {
-    event: 'ETH Istanbul - 2023',
-    achievement: '1st price from Aave and Unlimit',
+    achievement: '1st prize from Aave and Unlimit',
     githubLink: 'https://github.com/jonathangus/eth-global-istanbul',
     submissionLink: 'https://ethglobal.com/showcase/aatomato-mf0sy',
   },
@@ -126,7 +120,6 @@ export const hackathonAwards: HackathonAward[] = [
     githubLink: 'https://github.com/jonathangus/arbigates',
     submissionLink: 'https://devpost.com/software/lazy-mint',
   },
-
   {
     event: 'ETH Bogota - 2022',
     achievement: 'Wins from 9 sponsors',

@@ -48,7 +48,7 @@ export default function Home() {
                   11+ year experienced CTO and full stack software engineer
                 </p>
                 <p className="mb-4">
-                  Thought myself to build websites at 14. Always growing by
+                  Taught myself to build websites at 14. Always growing by
                   continuously doing things I find fun.
                 </p>
                 <p>
