@@ -9,16 +9,30 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { GitHubContributionsGrid } from '@/components/github-contributions-grid';
 import { getContributionsForPeriod, parsePeriodString } from '@/utils/github';
+import Image from 'next/image';
 
 interface WorkExperienceItemProps {
   experience: WorkExperience;
 }
 
 export function WorkExperienceItem({ experience }: WorkExperienceItemProps) {
-  const { title, company, period, description, videoUrl, showGithub } =
-    experience;
+  const {
+    title,
+    company,
+    period,
+    description,
+    videoUrl,
+    showGithub,
+    highlights,
+  } = experience;
 
   // Memoize the contributions data to prevent unnecessary recalculations
   const { contributions, totalCount } = useMemo(() => {
@@ -49,6 +63,55 @@ export function WorkExperienceItem({ experience }: WorkExperienceItemProps) {
         &gt; {company}
       </div>
       {description && <p className="text-muted-foreground">{description}</p>}
+
+      {/* Highlights Section */}
+      {highlights && highlights.length > 0 && (
+        <div className="mt-4 pb-4">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="highlights">
+              <AccordionTrigger className="text-sm font-mono uppercase tracking-wider text-black data-[state=open]:text-black">
+                Highlights
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-6 py-4">
+                  {highlights.map((highlight, index) => (
+                    <div key={index} className="flex gap-3">
+                      <div className="w-[5px] h-[5px] flex-shrink-0 bg-black mt-2" />
+                      <div className="space-y-2">
+                        <p className="text-muted-foreground">
+                          {highlight.text}
+                        </p>
+                        {highlight.link && (
+                          <a
+                            href={highlight.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-black hover:underline block"
+                          >
+                            Read more →
+                          </a>
+                        )}
+                        {highlight.image && (
+                          <div className="pt-2">
+                            <div className="relative w-full aspect-video mt-4 block">
+                              <Image
+                                src={highlight.image}
+                                alt="Highlight image"
+                                fill
+                                className="object-cover grayscale transition-all duration-1000 hover:grayscale-0"
+                              />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      )}
 
       {/* GitHub Contributions */}
       {hasContributions && (

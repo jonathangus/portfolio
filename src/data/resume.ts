@@ -1,3 +1,9 @@
+export interface WorkHighlight {
+  text: string;
+  link?: string;
+  image?: string;
+}
+
 export interface WorkExperience {
   title: string;
   company: string;
@@ -5,6 +11,7 @@ export interface WorkExperience {
   description?: string;
   videoUrl?: string;
   showGithub?: boolean;
+  highlights?: WorkHighlight[];
 }
 
 export interface HackathonAward {
@@ -29,6 +36,27 @@ export const workExperiences: WorkExperience[] = [
     showGithub: true,
     description:
       'Part of the founding team enabling individuals to invest in music rights from artists like Rihanna and Justin Bieber, onchain. Helped raise €7.3M and innovated on utilizing web3 for decentralization, transparency, and financial benefits for music royalties.',
+    highlights: [
+      {
+        text: 'Partnered with Coinbase to build on Base during their testnet phase after meeting Jesse at ETH Denver 2023. Was selected for their first onchainsummer campaign, driving 55K mints and 29K new users.',
+        link: 'https://x.com/base/status/1690393645919473665',
+      },
+      {
+        text: "Released Michael Jackson's first studio recording as an NFT, implementing content encryption via Lit Protocol with permanent storage on Arweave, ensuring perpetual playback rights for NFT holders.",
+        link: 'https://www.forbes.com/sites/hughmcintyre/2023/12/06/michael-jacksons-first-studio-recording-is-finally-being-digitally-released/',
+      },
+      {
+        text: "Strategically launched Rihanna's 'Bitch Better Have My Money' NFT prior to her Super Bowl performance, generating significant media coverage including CNN when she opened with the track.",
+        image: '/rihanna.jpg',
+      },
+      {
+        text: 'Selected for Optimism RetroPGF 3 in the End User UX category for improving Base network adoption',
+        link: 'https://round3.optimism.io/projects/0x709b9997ca752016352dd68ed316bf912105a1a476c25c44cbf1809686fa8bbc',
+      },
+      {
+        text: 'Enhanced web3 accessibility by implementing smart contract accounts through ZeroDev, seamless Privy authentication, and fiat payment integration for traditional users.',
+      },
+    ],
   },
   {
     title: 'Freelance',
@@ -49,18 +77,16 @@ export const workExperiences: WorkExperience[] = [
     company: '3',
     period: 'October 2019 - March 2021',
     showGithub: true,
-
     description:
-      'Launched tre.se and its new webshop while working on the architecture and foundation to improve the experience for developers, editors, and end-users. Shipped solutions to handle 100x increase in traffic during specific iPhone launches.',
+      'Launched tre.se and its new webshop while architecting infrastructure to handle 400x traffic spikes during iPhone launches. Established development foundations that improved experience for developers, editors, and end-users while ensuring platform stability during peak demand periods.',
   },
   {
     title: 'Senior Frontend Developer',
     company: 'Cabonline',
     period: 'February 2018 - October 2019',
     showGithub: true,
-
     description:
-      "Sweden's largest cab company, where I built consumer apps, internal apps, and public websites.",
+      "Sweden's largest cab company where I built a suite of consumer and internal applications. Built a resilient static Next.js booking interface that continues to serve customers 6 years later - always bet on web.",
   },
   {
     title: 'Lead Frontend Developer',
