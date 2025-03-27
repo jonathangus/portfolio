@@ -38,7 +38,7 @@ export const workExperiences: WorkExperience[] = [
       'Part of the founding team enabling individuals to invest in music rights from artists like Rihanna and Justin Bieber, onchain. Helped raise €7.3M and innovated on utilizing web3 for decentralization, transparency, and financial benefits for music royalties.',
     highlights: [
       {
-        text: 'Partnered with Coinbase to build on Base during their testnet phase after meeting Jesse at ETH Denver 2023. Was selected for their first onchainsummer campaign, driving 55K mints and 29K new users.',
+        text: 'Partnered with Coinbase to build on Base during their testnet phase and was selected for their first onchainsummer campaign, driving 55K mints and 29K new users.',
         link: 'https://x.com/base/status/1690393645919473665',
       },
       {
@@ -46,7 +46,7 @@ export const workExperiences: WorkExperience[] = [
         link: 'https://www.forbes.com/sites/hughmcintyre/2023/12/06/michael-jacksons-first-studio-recording-is-finally-being-digitally-released/',
       },
       {
-        text: "Strategically launched Rihanna's 'Bitch Better Have My Money' NFT prior to her Super Bowl performance, generating significant media coverage including CNN when she opened with the track.",
+        text: "Tokenized Rihanna's 'Bitch Better Have My Money' prior to her Super Bowl performance, generating significant media coverage including CNN when she opened with the track.",
         image: '/rihanna.jpg',
       },
       {
