@@ -40,8 +40,8 @@ export default function Home() {
         <main className="w-full max-w-4xl relative z-10">
           <div className="mx-0 md:mx-auto">
             <section className="mb-24">
-              <h1 className="mb-6  text-4xl md:text-5xl font-semibold leading-tight font-mono">
-                Jonathan Gustafsson
+              <h1 className="mb-6  text-4xl md:text-5xl uppercase leading-tight font-mono">
+                Jonathan_Gustafsson
               </h1>
               <div className=" text-lg text-muted-foreground">
                 <p className="mb-4">
