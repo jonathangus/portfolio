@@ -15,32 +15,32 @@ const departureMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Jonathan Gustafsson',
+  title: 'Jonathan Ljungek',
   description: '11+ year experienced CTO and full stack software engineer',
   keywords: [
-    'Jonathan Gustafsson',
+    'Jonathan Ljungek',
     'Web3',
     'Blockchain',
     'Frontend Developer',
     'CTO',
     'DeFi',
   ],
-  authors: [{ name: 'Jonathan Gustafsson' }],
+  authors: [{ name: 'Jonathan Ljungek' }],
   openGraph: {
-    title: 'Jonathan Gustafsson',
+    title: 'Jonathan Ljungek',
     description: '11+ year experienced CTO and full stack software engineer',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Jonathan Gustafsson - CTO and Full Stack Engineer',
+        alt: 'Jonathan Ljungek - CTO and Full Stack Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jonathan Gustafsson',
+    title: 'Jonathan Ljungek',
     description: '11+ year experienced CTO and full stack software engineer',
     images: ['/og.png'],
   },

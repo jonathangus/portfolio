@@ -12,17 +12,17 @@ const navItems = [
     external: true,
   },
   {
-    href: 'https://www.linkedin.com/in/jonathan-gustafsson/',
+    href: 'https://www.linkedin.com/in/jonathan-Ljungek/',
     label: 'Linkedin',
     external: true,
   },
 
   {
-    href: 'https://www.gustafsson.work/resume.pdf',
+    href: 'https://www.Ljungek.work/resume.pdf',
     label: 'Resume',
   },
   {
-    href: 'mailto:jonathan@gustafsson.work',
+    href: 'mailto:jonathan@Ljungek.work',
     label: 'Mail',
   },
 ];

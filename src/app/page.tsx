@@ -41,7 +41,7 @@ export default function Home() {
           <div className="mx-0 md:mx-auto">
             <section className="mb-24">
               <h1 className="mb-6 text-xl md:text-5xl leading-tight font-mono">
-                Jonathan_Gustafsson
+                Jonathan_Ljungek
               </h1>
               <div className=" text-lg text-muted-foreground">
                 <p className="mb-4">
